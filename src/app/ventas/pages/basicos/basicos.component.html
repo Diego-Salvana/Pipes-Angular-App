@@ -1,0 +1,63 @@
+<div class="text-layout">
+  <h1>Pipes Básicos</h1>
+  <p>Pipes incluídos en Angular - Usualmente en el Common Module</p>
+</div>
+
+<div class="grid">
+  <div class="col-4">
+    <p-card header="uppercase" [subheader]="name1 | uppercase">
+      {{ name1 | uppercase }}
+    </p-card>
+  </div>
+  <div class="col-4">
+    <p-card header="lowercase" [subheader]="name1 | lowercase">
+      {{ name1 | lowercase }}
+    </p-card>
+  </div>
+  <div class="col-4">
+    <p-card header="titlecase" [subheader]="name1 | titlecase">
+      {{ name1 | titlecase }}
+    </p-card>
+  </div>
+</div>
+
+<div class="text-layout mt-2">
+  <h1>Date | Fecha | Pipe</h1>
+  <p>Pipe para mostrar las fechas.</p>
+</div>
+
+<div class="grid">
+  <div class="col-6">
+    <p-card>
+      <ol>
+        <li class="mb-1">fecha</li>
+        <li class="mb-1">fecha | date</li>
+        <li class="mb-1">fecha | date: 'short'</li>
+        <li class="mb-1">fecha | date: 'long'</li>
+        <li class="mb-1">fecha | date: 'dd-MMM-yyyy'</li>
+      </ol>
+      <hr />
+      <ol>
+        <li class="mb-1">fecha | date: "long":"GMT-6"</li>
+        <li class="mb-1">fecha | date: "long":"":"fr"</li>
+      </ol>
+    </p-card>
+  </div>
+
+  <div class="col-6">
+    <p-card>
+      <ol>
+        <li class="mb-1">{{ today }}</li>
+        <li class="mb-1">{{ today | date }}</li>
+        <li class="mb-1">{{ today | date: "short" }}</li>
+        <li class="mb-1">{{ today | date: "long" }}</li>
+        <li class="mb-1">{{ today | date: "dd-MMM-yyyy" }}</li>
+      </ol>
+      <hr />
+      <ol>
+        <li class="mb-1">{{ today | date: "long":"GMT-6" }}</li>
+        <li class="mb-1">{{ today | date: "long":"":"fr" }}</li>
+      </ol>
+    </p-card>
+  </div>
+</div>
